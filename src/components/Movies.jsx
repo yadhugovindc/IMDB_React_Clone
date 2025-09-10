@@ -32,9 +32,9 @@ const Movies = ({handlewatchlist,movieObj,removewatchlist,watchlist}) => {
       <div className='text-2xl m-5 font-bold text-center'>
         Trending Movies
       </div>
-      <div className='flex flex-wrap justify-around gap-8'>
+      <div className='grid grid-cols-2 lg:grid-cols-5 gap-8 place-items-center w-100 '>
         {movies.map((movieObj)=>{
-          return <MovieCard backdrop_path={movieObj.backdrop_path} 
+          return <MovieCard backdrop_path={movieObj.backdrop_path}
           name
           ={movieObj.original_title} handlewatchlist={handlewatchlist} movieObj={movieObj} key={movieObj.id} removewatchlist={removewatchlist} watchlist={watchlist}/>
         })}

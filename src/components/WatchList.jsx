@@ -83,8 +83,8 @@ const WatchList = ({ watchlist, setWatchlist }) => {
           className="h-[3rem] w-[18rem] bg-gray-200 outline-none px-4 rounded-xl"
         />
       </div>
-      <div className="rounded overflow-hidden border border-gray-200 m-8 ">
-        <table className="w-full text-center text-gray-500">
+      <div className="overflow-x-auto rounded overflow-hidden border border-gray-200 m-8 ">
+        <table className="min-w-full text-center text-gray-500">
           <thead className="border-b-2">
             <tr>
               <th>Name</th>
@@ -133,13 +133,13 @@ const WatchList = ({ watchlist, setWatchlist }) => {
               .map((movieObj) => {
                 return (
                   <tr>
-                    <td className="flex items-center px-3 py-3">
+                    <td className="flex items-center px-3 py-3  ">
                       <img
-                        className="h-[6rem] w-[10rem] rounded-xl"
+                        className="h-[6rem] w-[10rem] rounded-xl hidden md:block"
                         src={`https://image.tmdb.org/t/p/original/${movieObj.backdrop_path}`}
                         alt=""
                       />
-                      <div className="mx-10">{movieObj.original_title}</div>
+                      <div className="lg:mx-10 ">{movieObj.original_title}</div>
                     </td>
                     <td>{movieObj.vote_average}</td>
                     <td>{movieObj.popularity}</td>
